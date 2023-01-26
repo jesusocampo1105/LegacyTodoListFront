@@ -36,7 +36,7 @@ function App() {
       }
     }
     getFlowerList();
-  }, [listFlowers]);
+  }, []);
 
   //Delete
   const deleteFlower = async (id) => {
@@ -87,7 +87,7 @@ function App() {
           {
             listFlowers.map(a => (
               <div>
-                {
+                {/*
                   isUpdating === a._id
                   ? renderUpdateForm()
                   :<>
@@ -95,7 +95,7 @@ function App() {
                   <button onClick={()=>{setIsUpdating(a._id)}}>Modificar</button>
                   <button onClick={() => { deleteFlower(a._id) }}>Borrar</button>
                   </>
-                }                
+                */}                
               </div>
             ))
           }
