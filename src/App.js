@@ -84,7 +84,7 @@ function App() {
           <button type='submit'>Agregar</button>
         </form>
         <div>
-          {/*
+          {
             listFlowers.map(a => (
               <div>
                 {
@@ -98,7 +98,7 @@ function App() {
                 }                
               </div>
             ))
-          */}
+          }
         </div>
 
       </div>
