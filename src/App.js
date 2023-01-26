@@ -36,7 +36,7 @@ function App() {
       }
     }
     getFlowerList();
-  }, []);
+  }, [listFlowers]);
 
   //Delete
   const deleteFlower = async (id) => {
