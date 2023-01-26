@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Griffy&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+
+.todo-app {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  min-height: 400px;
+  text-align: center;
+  margin: 128px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
+}
+
+img{
+  max-width: 180px;
+  margin-top: 30px;
+  margin-bottom: 25px;
+ 
+}
+h1 {
+  margin-bottom: 30px;
+  margin-top: 0px;
+  color: rgb(0, 0, 0);
+  font-size: 32px;
+  font-weight: bolder;
+}
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.todo-form {
+  margin-bottom: 32px;
+}
+
+.todo-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 3px solid  rgb(150, 104, 131);
+  border-radius: 15px 0px 0px 15px;
+  outline: none;
+  width: 320px;
+  background: transparent;
+  color: rgb(0, 0, 0);
+}
+
+.todo-input::placeholder {
+  color: #0000009f;
+}
+
+.todo-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 15px 15px 0;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(
+    90deg,
+    rgb(248, 205, 219) 0%,
+    rgb(150, 104, 131) 100%
+  );
+  color: rgb(0, 0, 0);
+  text-transform: capitalize;
+}
+
+.todo-input.edit {
+  border: 2px solid #4db1ac;
+}
+
+.todo-button.edit {
+  background: linear-gradient(
+    90deg,
+    rgb(119, 209, 91) 0%,
+    rgb(152, 231, 169) 100%
+  );
+  padding: 16px 22px;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: rgb(0, 0, 0);
+ border: solid rgb(150, 104, 131) 3px;
+
+
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.todo-row:nth-child(4n + 1) {
+  border: solid rgb(150, 104, 131) 3px;
+}
+
+.todo-row:nth-child(4n + 2) {
+  border: solid rgb(150, 104, 131) 3px;
+}
+
+.todo-row:nth-child(4n + 3) {
+  border: solid rgb(150, 104, 131) 3px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.icons-i{
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  cursor: pointer;
+  color: rgb(150, 104, 131);
+}
+
+.delete-icon {
+  margin-right: 5px;
+  color: #783D3D;
+}
+
+.edit-icon {
+  color: #783D3D;
+}
+
+.tit-to-do{
+  font-family: 'Griffy', cursive;
+}
+
+.head{
+  width: 100%;
+  height: 135px;
+  background-image: url(./img/flor2.png);
+}
+
+@media (max-width: 510px) { 
+  .head{
+    height: 75px;
+  }
+}
+
+.todo-todo{
+  width: 100%;
+  height: 100vh;
+}
+
+.footer{
+  width: 100%;
+  height: 50px;
+  bottom: 10px;
+  background-color:#BD89A2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.asidei{ 
+  display: flex;
+	float:left;
+	width: 170px;
+  height:220px;
+  margin-top: 50px;
+
+}
+.asided{
+	float:right;
+	width: 170px;
+  height:220px;
+  right: 0;
+}
