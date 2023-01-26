@@ -84,10 +84,10 @@ function App() {
           <button type='submit'>Agregar</button>
         </form>
         <div>
-          {
+          {/*
             listFlowers.map(a => (
               <div>
-                {/*
+                {
                   isUpdating === a._id
                   ? renderUpdateForm()
                   :<>
@@ -95,10 +95,10 @@ function App() {
                   <button onClick={()=>{setIsUpdating(a._id)}}>Modificar</button>
                   <button onClick={() => { deleteFlower(a._id) }}>Borrar</button>
                   </>
-                */}                
+                }                
               </div>
             ))
-          }
+          */}
         </div>
 
       </div>
