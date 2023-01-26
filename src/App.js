@@ -3,7 +3,7 @@ import './App.css';
 import axios from 'axios';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
-
+let url ="https://legacy-todo-list-back.vercel.app";
 
 function App() {
   const [input, setInput] = useState('');
@@ -16,7 +16,7 @@ function App() {
   const addFlower = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('/new/flower', { flower: input });
+      const res = await axios.post(url+'/new/flower', { flower: input });
       setListFlowers(prev => [...prev, res.data]);
       console.log(res);
       setInput('');
@@ -29,7 +29,7 @@ function App() {
   useEffect(() => {
     const getFlowerList = async () => {
       try {
-        const res = await axios.get('/get/flowers');
+        const res = await axios.get(url+'/get/flowers');
         setListFlowers(res.data);
       } catch (error) {
         console.log(error);
@@ -41,7 +41,7 @@ function App() {
   //Delete
   const deleteFlower = async (id) => {
     try {
-      const res = await axios.delete(`/new/flower/${id}`);
+      const res = await axios.delete(url+`/new/flower/${id}`);
       const newListFlowers = listFlowers.filter(input => input._id !== id);
       setListFlowers(newListFlowers);
       console.log(res.data);
@@ -54,7 +54,7 @@ function App() {
   const updateFlower = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.put(`/new/flower/${isUpdating}`, { flower: updateInput });
+      const res = await axios.put(url+`/new/flower/${isUpdating}`, { flower: updateInput });
       console.log(res.data);
       const updateFlowerIndex = listFlowers.findIndex(input => input._id === isUpdating);
       const updatedFlower = listFlowers[updateFlowerIndex].flower = updateInput;
